@@ -7,3 +7,4 @@
 # echo INPUT
 
 echo Hello World
+Welcome to Devops Training
