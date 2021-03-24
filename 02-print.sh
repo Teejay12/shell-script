@@ -12,4 +12,8 @@ echo Welcome to Devops Training
 
 echo Training Session
 
+# to print multi line outputs we need to enable escape sequences \n
+# Syntax: echo -e "Hello\nWorld"
+
+echo -e "Hello\nWorld"
 
