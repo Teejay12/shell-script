@@ -33,4 +33,5 @@ echo -e "Hello\nWorld"
 # Syntax: echo -e "\e{COLCODEmMESSAGE"
 
 echo -e "\e{31mHello in Red"
-echo -e "\e{1;31nHello in Bold Red"
+echo -e "\e{1;31mHello in Bold Red"
+
