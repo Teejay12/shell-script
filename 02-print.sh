@@ -17,3 +17,20 @@ echo Training Session
 
 echo -e "Hello\nWorld"
 
+# Color based printing
+
+# Colors
+# Red         31
+# Green       32
+# Yellow      33
+# Blue        34
+# Magenta     35
+# Cyan        36
+
+# Reset    0
+# Bold     1
+
+# Syntax: echo -e "\e{COLCODEmMESSAGE"
+
+echo -e "\e{31mHello in Red"
+echo -e "\e{1;31nHello in Bold Red"
