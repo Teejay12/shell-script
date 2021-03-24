@@ -13,3 +13,10 @@ COURSE=LINUX
 echo welcome to ${COURSE} training
 echo training of $COURSE lasts for 70 days
 echo "$COURSE training covers shell scripting & Ansible"
+
+## Accessing variable can be done with $var and also ${var}
+
+a=100
+fruit=Apple
+echo $fruit is $ano
+echo $fruit is ${a}no
