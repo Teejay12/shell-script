@@ -8,8 +8,8 @@
 
 echo Hello World
 
-Welcome to Devops Training
+echo Welcome to Devops Training
 
-Training Session
+echo Training Session
 
 
