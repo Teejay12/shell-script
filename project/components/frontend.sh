@@ -11,6 +11,7 @@ else
   echo -e "\e[1;32m [SUCC] Nginx Installation is successful"
 fi
 echo "................................................"
+echo -e "\e[1;35m [INFO] Download Frontend Component\e[0m"
 echo "................................................"
 
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
