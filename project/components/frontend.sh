@@ -12,7 +12,6 @@ else
 fi
 echo "................................................"
 echo "................................................"
-exit
 
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 if [ $? -ne 0 ]; then
