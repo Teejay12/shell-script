@@ -9,3 +9,6 @@ cart:	## install cart component for Roboshop project
 
 frontend:	## install frontend web component for Roboshop project
 	@sh components/frontend.sh
+
+mongodb:  ## install mongodb component for Roboshop project
+	@sh components/mongodb.sh
