@@ -30,7 +30,8 @@ STAT $? "Downloading Schema"
 
 PRINT "Extract MongoDB Schemas"
 cd /tmp
-unzip mongodb.zip
+unzip -o mongodb.zip
+STAT $? "Extracting MongoDB Schema"
 
 PRINT "Load Schema"
 cd mongodb-main
