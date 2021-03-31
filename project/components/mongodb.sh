@@ -34,6 +34,5 @@ unzip mongodb.zip
 
 PRINT "Load Schema"
 cd mongodb-main
-mongo < catalogue.js
-mongo < users.js
+mongo < catalogue.js && mongo < users.js
 STAT $? "Loading Schema"
