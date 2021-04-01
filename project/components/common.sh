@@ -35,6 +35,11 @@ NodeJS_Install() {
 }
 
 Roboshop_App_User_Add() {
+  id roboshop
+  if [ $? -eq 0 ]; then
+    PRINT "Create Roboshop Application User - User Already Exists"
+    return
+  fi
   PRINT "Create Roboshop Application User"
   useradd roboshop
   STAT $? "Creating Application User"
@@ -44,4 +49,26 @@ Download_Component_From_GitHub() {
   PRINT "Download ${COMPONENT} Component"
   curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip"
   STAT $? "Downloading ${COMPONENT}"
+}
+
+Extract_Component() {
+  PRINT "Extract ${COMPONENT}"
+  cd /home/roboshop
+  rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip && mv ${COMPONENT}-main ${COMPONENT}
+  STAT $? "Extracting ${COMPONENT}"
+}
+
+Install_NodeJS_Dependencies() {
+  PRINT "Download NodeJS dependencies"
+  cd /home/roboshop/${COMPONENT}
+  npm install --unsafe-perm
+  STAT $? "Downloading dependencies"
+}
+
+NodeJS_Setup() {
+  NodeJS_Install
+  Roboshop_App_User_Add
+  Download_Component_From_GitHub
+  Extract_Component
+  Install_NodeJS_Dependencies
 }

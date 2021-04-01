@@ -3,23 +3,7 @@
 source components/common.sh
 COMPONENT=catalogue
 
-NodeJS_Install
-Roboshop_App_User_Add
-
-PRINT "Download Catalogue Component"
-curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-STAT $? "Downloading Catalogue"
-
-PRINT "Extract Catalogue"
-cd /home/roboshop
-rm -rf catalogue && unzip /tmp/catalogue.zip && mv catalogue-main catalogue
-STAT $? "Extracting catalogue"
-
-PRINT "Download NodeJS dependencies"
-cd /home/roboshop/catalogue
-npm install
-STAT $? "Downloading dependencies"
-
+NodeJS_Setup
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 # systemctl daemon-reload
