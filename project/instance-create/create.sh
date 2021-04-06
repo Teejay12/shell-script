@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 LID=lt-08ac456114106d2bb
 LVER=2
 COMPONENT=$1
