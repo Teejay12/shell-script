@@ -1,4 +1,4 @@
-- name: Just a demo of showing playbook
+- name: Just a demo of showing playbook format
   hosts: all
   tasks:
     - name: Print Hello World
