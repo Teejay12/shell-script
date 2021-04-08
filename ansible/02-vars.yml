@@ -6,3 +6,7 @@
     - name: Print Variable Value
       debug:
         msg: Hello {{ URL_PLAY }}
+
+    - name: Print Variable Again
+      debug:
+        msg: Bye {{ URL_PLAY }}
