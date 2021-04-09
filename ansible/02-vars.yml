@@ -20,9 +20,9 @@
       vars:
         URL_TASK1: task1.example.com
 
-    - name: print task level variable
-      debug:
-        msg: hello {{ URL_TASK1 }}
+#   - name: print task level variable
+#     debug:
+#       msg: hello {{ URL_TASK1 }}
 
 - name: Demo on same var from play and task
   hosts: all
