@@ -1,4 +1,6 @@
 - name: Demo on roles
   hosts: all
+  vars:
+    URL: play.example.com
   roles:
     - sample
