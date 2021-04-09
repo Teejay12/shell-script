@@ -67,3 +67,14 @@
     - name: Print fact
       debug:
         msg: fact = {{ ansible_memtotal_mb }}
+
+- name: Demo on Dynamic variables
+  hosts: all
+  tasks:
+    - name: Run uptime command
+      shell: uptime
+      register: OUT
+
+    - name: Print Out
+      debug:
+        msg: "{{OUT}}"
