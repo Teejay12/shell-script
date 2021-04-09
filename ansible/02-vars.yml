@@ -37,3 +37,10 @@
     - name: Print URL
       debug:
         msg: Hello , {{ URL }}
+
+- name: Demo on CLI vars
+  hosts: all
+  tasks:
+    - name: Print URL from CLI
+      debug:
+        msg: Hello, {{ URL_CLI }}
