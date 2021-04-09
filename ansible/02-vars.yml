@@ -16,7 +16,7 @@
   tasks:
     - name: print task level variable
       debug:
-        msg: hello {{ URL_TASK1 }}
+        msg: Hello {{ URL_TASK1 }}
       vars:
         URL_TASK1: task1.example.com
 
