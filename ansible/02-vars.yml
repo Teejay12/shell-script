@@ -78,3 +78,12 @@
     - name: Print Out
       debug:
         msg: "{{OUT}}"
+## use double quotes when you use only variable as value to the key
+
+    - name: Set a fact
+      set_fact:
+        UPTIME_OUTPUT: "{{ OUT.stdout }}"
+
+    - name: Print Uptime Output
+      debug:
+        msg: OUTPUT = {{ UPTIME_OUTPUT }}
