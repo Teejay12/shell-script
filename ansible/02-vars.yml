@@ -44,3 +44,10 @@
     - name: Print URL from CLI
       debug:
         msg: Hello, {{ URL_CLI }}
+
+- name: Demo on vars from inventory
+  hosts: all
+  tasks:
+    - name: Print URL from INV
+      debug:
+        msg: Hello, {{ URL_INV }}
