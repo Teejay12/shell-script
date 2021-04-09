@@ -24,3 +24,16 @@
       debug:
         msg: hello {{ URL_TASK1 }}
 
+- name: Demo on same var from play and task
+  hosts: all
+  vars:
+    URL: play.example.com
+  tasks:
+    - name: Print URL
+      debug:
+        msg: Hello , {{ URL }}
+      vars:
+        URL: task.example.com
+    - name: Print URL
+      debug:
+        msg: Hello , {{ URL }}
