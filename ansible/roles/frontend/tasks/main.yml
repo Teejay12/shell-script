@@ -2,3 +2,8 @@
   yum:
     name: nginx
     state: installed
+
+- name: Download from github
+  include_role:
+    name: common
+    tasks_from: download-github
