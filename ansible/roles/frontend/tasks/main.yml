@@ -7,3 +7,14 @@
   include_role:
     name: common
     tasks_from: download-github
+
+- name: Remove html Docs
+  file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: copy the extracted content
+  copy:
+    src: /tmp/frontend-main/static
+    dest: /usr/share/nginx/html
+    remote_src: yes
