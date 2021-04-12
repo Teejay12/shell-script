@@ -18,3 +18,9 @@
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html
     remote_src: yes
+
+- name: start nginx service
+  systemd:
+    name: nginx
+    state: restarted
+    enabled: yes
