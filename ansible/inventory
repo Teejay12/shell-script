@@ -1,2 +1,2 @@
-172.31.63.112
-#localhost ansible_connection=local URL_INV=hosts.example.com
+172.31.38.142
+localhost ansible_connection=local URL_INV=hosts.example.com
