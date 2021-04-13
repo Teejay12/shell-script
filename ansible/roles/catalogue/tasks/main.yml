@@ -15,6 +15,11 @@
     name: common
     tasks_from: download-github
 
+- name: Install NodeJS deps
+  npm:
+    path: /home/roboshop/{{COMPONENT}}
+  become_user: roboshop
+
 # $ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
 # $ cd /home/roboshop
 # $ unzip /tmp/catalogue.zip
