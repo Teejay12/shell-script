@@ -14,15 +14,23 @@
     regexp: '^  bindIp'
     line: '  bindIp: 0.0.0.0'
 
+- name: restart mongodb
+  systemd:
+    name: mongod
+    state: restarted
+    enabled: yes
+
+- name: Download from github
+  include_role:
+    name: common
+    tasks_from: download-github
 
 
 
 
 
 
-#    then restart the service
 
-#  # systemctl restart mongod
 # curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
 
 # cd /tmp
