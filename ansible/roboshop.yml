@@ -1,5 +1,13 @@
 - name: Roboshop Project Setup
   hosts: all
   become: yes
-  roles:
-    - frontend
+  tasks:
+    - name: import frontend role
+      import_role:
+        name: frontend
+      when: APP == "frontend"
+
+    - name: import mongodb role
+      import_role:
+        name: mongodb
+      when: APP == "mongodb"
