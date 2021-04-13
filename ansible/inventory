@@ -1,2 +1,3 @@
-172.31.63.112
-localhost ansible_connection=local URL_INV=hosts.example.com
+frontend=172.31.63.112
+catalogue=172.31.38.142
+mongodb=172.31.24.31
