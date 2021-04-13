@@ -14,5 +14,5 @@
 - name: Copy Files from tmp to app directory
   copy:
     src: /tmp/{{COMPONENT}}-main/
-    dest: /home/roboshop/{{COMPONENT}}
+    dest: /root/roboshop/{{COMPONENT}}
     remote_src: yes
