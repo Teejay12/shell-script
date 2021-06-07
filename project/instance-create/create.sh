@@ -1,7 +1,7 @@
 #!/bin/bash
 
-LID=lt-08ac456114106d2bb
-LVER=7
+LID=lt-08379b2438cc870c6
+LVER=1
 COMPONENT=$1
 
 if [ -z "${COMPONENT}" ]; then
